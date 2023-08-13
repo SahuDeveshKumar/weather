@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>weather Web</title>
+   <style>
+      * {
+         font-family: sans-serif;
+         color: #f3e2e2;
+      }
+
+      .main_cont {
+         max-width: 25%;
+         max-height: 120vh;
+         background: linear-gradient(180deg, #00feba, #5b548a);
+         margin: 65px auto;
+         border-radius: 20px;
+         padding: 40px 35px;
+         text-align: center;
+
+      }
+
+      .search_cont {
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         justify-content: space-between;
+      }
+
+      input {
+         border: 0;
+         border-radius: 50px;
+         height: 60px;
+         font-size: 18px;
+         padding: 1px 45px;
+         flex: 1;
+         color: black;
+      }
+
+      button {
+         background: #ebfffc;
+         cursor: pointer;
+         border: 0;
+         mix-blend-mode: multiply;
+      }
+
+      .basic_details {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 0px 25px;
+      }
+
+      .col {
+         display: flex;
+         align-items: center;
+         text-align: left;
+
+      }
+
+      .col img {
+         width: 40px;
+         margin-right: 10px;
+      }
+
+      .humidity_val,
+      .wind_val {
+         font-size: 23px;
+      }
+   </style>
+</head>
+
+<body style="background: #a4a4a4;">
+
+   <div class="main_cont">
+
+      <nav class="search_cont">
+         <input type="text" name="cityname" id="cityname" placeholder="enter city name">
+         <button><img src="./images/search.png" alt="search"></button>
+      </nav>
+      <div class="err" style="display: none;font-size: 25px;color: #ec0000;">Invalid City</div>
+      <div class="details_cont" style="display: none;">
+         <img src="./images/clouds.png" alt="img" class="tempimg"><br>
+         <span class="temp" style="font-size: 75px;">22°c</span><br>
+         <h2 class="city" style="font-size: 45px;margin-top: 19px;">hyderabad</h2>
+         <div class="basic_details">
+            <div class="col">
+               <img src="./images/humidity.png" alt="humidity">
+               <div>
+                  <span class="humidity_val">32%</span><br>
+                  <span>Humidity</span>
+               </div>
+            </div>
+
+            <div class="col">
+               <img src="./images/wind.png" alt="wind">
+               <div>
+                  <span class="wind_val">15Km/hr</span><br>
+                  <span>Wind Speed</span>
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+   </div>
+
+   <script src="main.js"></script>
+</body>
+
+
+</html>
